@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Gemini Best Products Generation</title>
+</head>
+<body>
+  <h1>Generate Products with Gemini</h1>
+  <form action="{{ url_for('generate_products') }}" method="post">
+    <label for="productUrl">Enter your product url:</label>
+    <br>
+    <textarea id="productUrl" name="productUrl" rows="4" cols="50"></textarea>
+    <br>
+    <button type="submit">Generate Best Products</button>
+  </form>
+  <br>
+  {% if generated_products %}
+    <p>Best products:</p>
+    <p>{{ generated_products }}</p>
+  {% endif %}
+</body>
+</html>
