@@ -16,7 +16,7 @@ def generate_products():
 
 Here's the link: {productUrl}
 """
-            genai.configure(api_key=os.getenv("AIzaSyDx1_IO-BAFtUD06pqbPv-aW10BRionssg"))
+            genai.configure(api_key=os.getenv("GOOLGE_API_KEY"))
             model = genai.GenerativeModel('gemini-pro')
             response = model.generate_content(prompt_text)
           
